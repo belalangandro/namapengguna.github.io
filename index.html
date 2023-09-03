@@ -1,0 +1,1933 @@
+
+
+<!-- saved from url=(0068)https://ibank.klikbca.com/accountstmt.do?value(actions)=acctstmtview -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+<!--
+.small{FONT-FAMILY: Arial, Helvetica, sans-serif;
+       FONT-SIZE: 3pt;
+       FONT-STYLE: normal
+}
+.aktif{COLOR: blue;
+       FONT-SIZE: 9pt;
+       FONT-FAMILY: Arial, Helvetica, sans-serif;
+       FONT-STYLE: normal
+}
+A:active{ COLOR: yellow; }
+A:hover{ COLOR: yellow; }
+A:link {TEXT-DECORATION: none}
+A:visited {text-decoration: none; }
+-->
+</style>
+<script>
+var timerID = null;
+var timerRunning = false;
+var months=new Array(13);
+months[1]="Jan";
+months[2]="Feb";
+months[3]="Mar";
+months[4]="Apr";
+months[5]="May";
+months[6]="Jun";
+months[7]="Jul";
+months[8]="Aug";
+months[9]="Sep";
+months[10]="Oct";
+months[11]="Nov";
+months[12]="Dec";
+function stopclock(){
+  if(timerRunning)
+    clearTimeout(timerID);
+    timerRunning=false;
+}
+function startclock() {
+   xnow = new Date('Sep 03, 2023 22:06:35');
+   stopclock();
+   showtime();
+}
+function showtime() {
+   xnow.setSeconds(xnow.getSeconds()+1);
+   var lmonth=(((xnow.getMonth()+1) < 10) ? "0" : "") + (xnow.getMonth()+1);
+   var date=((xnow.getDate() < 10) ? "0" : "") + xnow.getDate();
+   var year=xnow.getYear();
+   if (year<2000) year=year+1900
+   var hour=((xnow.getHours() < 10) ? "0" : "") + xnow.getHours();
+   var min=((xnow.getMinutes() < 10) ? "0" : "") + xnow.getMinutes();
+   var sec=((xnow.getSeconds() < 10) ? "0" : "") + xnow.getSeconds();
+   document.DateTime.document.write("<font face=verdana size=1 color=#000000>Tanggal : " + "&nbsp;" + months[xnow.getMonth()+1] + "&nbsp;" + year + "           Jam : " + hour + ":" + min + ":" + sec + "</font>");
+   timerID = setTimeout("showtime()",900);
+   timerRunning = true;
+}
+var ms = 0;
+function fncSetTimer() {
+	ms = 0;
+	then = new Date();
+	then.setTime(then.getTime() - ms);
+}
+function fncTimer() {
+	  setTimeout("fncTimer();", 10000);
+	  ynow = new Date();
+	  ms = ynow.getTime() - then.getTime();
+	  if (ms>=300000) {
+	     fncSetTimer();
+	     fncLogoff();
+	  }
+	window.status=parseInt(ms/1000) + " seconds idle";
+}
+function fncLogoff() {
+	document.iBankForm.action = "sessionexpired.htm";
+	document.iBankForm.submit();
+}
+</script>
+</head><body alink="white" link="white" vlink="white" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" onload="startclock();fncSetTimer();fncTimer();">
+<layer id="DateTime" left="25" top="12"></layer>
+<table border="0" cellpadding="0" cellspacing="0" width="590">
+   <tbody><tr height="20" bgcolor="#e7d300">
+      <td bgcolor="#e7d300" width="393">
+         <font face="Verdana" size="2" color="#0000bb">&nbsp;
+         </font>
+      </td>
+      <td width="25" bgcolor="#4a55b5"><img src="./latar1b.jpg"></td>
+      <td width="100" bgcolor="#4a55b5" align="center" class="aktif"></td>
+   </tr>
+   <tr bgcolor="#4A55B5" height="2"><td colspan="3"></td></tr>
+</tbody></table>
+
+<table border="0" cellpadding="1" cellspacing="0" width="590">
+   <tbody><tr height="20">
+      <td colspan="3" bgcolor="#8486de">
+         <font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="white">&nbsp;INFORMASI REKENING - MUTASI REKENING</font>
+      </td>
+   </tr>
+   <tr>
+      <td bgcolor="#FFFFFF" colspan="3"></td></tr><tr><td bgcolor="#FFFFFF" colspan="3"></td>
+   </tr>
+</tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="590">
+<tbody><tr>  <td colspan="2" align="center">    <table border="0" width="90%" cellpadding="0" cellspacing="0" bordercolor="#f0f0f0">          <tbody><tr><td colspan="3"><hr></td></tr>          <tr bgcolor="#e0e0e0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Nomor Rekening</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td><font face="Verdana" size="1" color="#0000bb">6560089609</font></td></tr>          <tr bgcolor="#f0f0f0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Nama</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td><font face="Verdana" size="1" color="#0000bb">NURRUL HIDAYATI         </font></td></tr>          <tr bgcolor="#e0e0e0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Periode</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td><font face="Verdana" size="1" color="#0000bb">01/08/2023 - 31/08/2023</font></td></tr>          <tr bgcolor="#f0f0f0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Mata Uang</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td><font face="Verdana" size="1" color="#0000bb">IDR</font></td></tr>          <tr><td colspan="3"><hr></td></tr>    </tbody></table>  </td></tr><tr>  <td colspan="2">    <table border="1" width="100%" cellpadding="0" cellspacing="0" bordercolor="#ffffff">
+<tbody><tr>
+<td width="30" bgcolor="e0e0e0"><div align="left">
+<font face="Verdana" size="1" color="#0000bb">
+<b>Tgl.</b></font></div></td>
+<td width="130" bgcolor="e0e0e0"><div align="left">
+<font face="Verdana" size="1" color="#0000bb">
+<b>Keterangan</b></font></div></td>
+<td width="30" bgcolor="e0e0e0"><div align="center">
+<font face="Verdana" size="1" color="#0000bb">
+<b>Cab.</b></font></div></td>
+<td width="" bgcolor="e0e0e0" colspan="2"><div align="right">
+<font face="Verdana" size="1" color="#0000bb">
+<b>Mutasi</b></font></div></td>
+<td width="" bgcolor="e0e0e0"><div align="right">
+<font face="Verdana" size="1" color="#0000bb">
+<b>Saldo</b></font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+01/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>3107/FTSCY/WS95031<br>         700000.00<br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+700,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+15,993,292.97</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+01/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2372300.00DDR:       3558.45</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,368,741.55</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+18,362,034.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+01/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0108/FTSCY/WS95031<br>        1000000.00<br>PUJIANTO</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,000,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,362,034.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+02/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1824000.00DDR:       2736.00</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,821,264.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,183,298.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+02/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0208/FTSCY/WS95031<br>        1770000.00<br>DIDI KURNIAWAN</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,770,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,413,298.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+02/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0208/FTSCY/WS95031<br>        3756000.00<br>HAMDANI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,756,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+13,657,298.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+02/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0208/FTSCY/WS95031<br>         925000.00<br>HAMDANI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+925,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+12,732,298.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+03/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2476300.00DDR:       3714.45</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,472,585.55</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+15,204,884.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+03/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0308/FTSCY/WS95031<br>         370000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+370,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,834,884.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+03/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>0308/FTSCY/WS95031<br>          20000.00<br>pukel             <br>SUSAN OKTAVIYANI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0474</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+20,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,854,884.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+04/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2685400.00DDR:       4028.10</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,681,371.90</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,536,255.97</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+05/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1509500.00DDR:       2264.25</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,507,235.75</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,043,491.72</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+05/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+BIAYA ADM<br>FREK 0000044 07/23</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+22,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,021,491.72</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+06/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    3049200.00DDR:       4573.80</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,044,626.20</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+22,066,117.92</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+07/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2047200.00DDR:       3070.80</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,044,129.20</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+24,110,247.12</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+08/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1970000.00DDR:       3388.50</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,966,611.50</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+26,076,858.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+08/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0808/FTSCY/WS95031<br>        3840000.00<br>DIDI KURNIAWAN</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,840,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+22,236,858.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+09/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0808/FTSCY/WS95031<br>          75000.00<br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+75,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+22,161,858.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+09/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2308000.00DDR:       3462.00</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,304,538.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+24,466,396.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+09/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0908/FTSCY/WS95031<br>        4473000.00<br>LILIS ANGGRAINI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,473,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,993,396.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+09/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>0908/FTSCY/WS95031<br>        4487000.00<br>LILIS ANGGRAINI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,487,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+15,506,396.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+09/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>0908/FTSCY/WS95031<br>          30000.00<br>SUSAN OKTAVIYANI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0474</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+30,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+15,536,396.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+10/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    4143500.00DDR:      16061.65</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,127,438.35</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,663,834.97</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+11/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1063000.00DDR:       1594.50</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,061,405.50</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+20,725,240.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+11/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1108/FTSCY/WS95031<br>         900000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+900,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,825,240.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+12/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2190300.00DDR:       4097.20</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,186,202.80</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+22,011,443.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+12/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1208/FTSCY/WS95031<br>        3500000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,500,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+18,511,443.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+12/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1208/FTSCY/WS95031<br>         500000.00<br>ANGGIH TRIANA</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+500,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+18,011,443.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+12/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1208/FTSCY/WS95031<br>         200000.00<br>SAN AYU SIHOMBING</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+200,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,811,443.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+13/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1209200.00DDR:       1813.80</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,207,386.20</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19,018,829.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+13/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1308/FTSCY/WS95031<br>        5660000.00<br>KAMALUDIN</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+5,660,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+13,358,829.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+14/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1166100.00DDR:       1749.15</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,164,350.85</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,523,180.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+14/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1408/FTSCY/WS95031<br>        3672000.00<br>AYOTAMA NUSANTARA</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,672,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+10,851,180.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+14/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1408/FTSCY/WS95031<br>       10000000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+10,000,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+851,180.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+15/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    3182400.00DDR:       4773.60</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,177,626.40</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,028,806.72</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+15/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1508/FTSCY/WS95031<br>        1790000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,790,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,238,806.72</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+15/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>1508/FTSCY/WS95031<br>          40000.00<br>aren latte        <br>SUSAN OKTAVIYANI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0474</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+40,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,278,806.72</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+16/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1885000.00DDR:       2827.50</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,882,172.50</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,160,979.22</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+16/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1608/FTSCY/WS95031<br>         900000.00<br>SRI PURWANTI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+900,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,260,979.22</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+16/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>1608/FTSCY/WS95031<br>          31000.00<br>tahu sumedang  tah<br>u susu lunas      <br>NUR ASIYAH</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0345</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+31,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,291,979.22</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+17/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1871300.00DDR:       4094.70</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,867,205.30</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+5,159,184.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+17/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1708/FTSCY/WS95031<br>        3473000.00<br>AYOTAMA NUSANTARA</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,473,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,686,184.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+18/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1708/FTSCY/WS95031<br>         200000.00<br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+200,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,486,184.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+18/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1413000.00DDR:       2119.50</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,410,880.50</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,897,065.02</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+18/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+BIAYA ADM<br></font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,883,065.02</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+19/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1721900.00DDR:       2582.85</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,719,317.15</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,602,382.17</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+19/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1908/FTSCY/WS95031<br>         750000.00<br>ANGGIH TRIANA</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+750,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,852,382.17</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+19/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>1908/FTSCY/WS95031<br>         830000.00<br>SRI WAHYUNINGSIH</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+830,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,022,382.17</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+20/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1915800.00DDR:       2873.70</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,912,926.30</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,935,308.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+21/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:     253600.00DDR:        380.40</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+253,219.60</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+5,188,528.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+21/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2108/FTSCY/WS95031<br>         250000.00<br>AGUS ILYAS</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+250,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,938,528.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+21/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2108/FTSCY/WS95031<br>        4800000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,800,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+138,528.07</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+22/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1966600.00DDR:       2949.90</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,963,650.10</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,102,178.17</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2208/FTSCY/WS95031<br>         245000.00<br>CINTYA FADILLA</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+245,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,857,178.17</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2410400.00DDR:      10449.60</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,399,950.40</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,257,128.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2308/FTSCY/WS95031<br>         150000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+150,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+4,107,128.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2308/FTSCY/WS95031<br>        2000000.00<br>LILIS SUKAETI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,000,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,107,128.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2308/FTSCY/WS95031<br>         600000.00<br>NURAHMAH</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+600,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,507,128.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2308/FTSCY/WS95031<br>         412500.00<br>SRI WAHYUNINGSIH</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+412,500.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,094,628.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2308/FTSCY/WS95031<br>        1000000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,000,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+94,628.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+23/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>2308/FTSCY/WS95031<br>       11000000.00<br>cimb              <br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0491</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,000,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,094,628.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+24/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1833400.00DDR:       7680.10</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,825,719.90</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+12,920,348.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+24/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2408/FTSCY/WS95031<br>        3504000.00<br>AYOTAMA NUSANTARA</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,504,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+9,416,348.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+24/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2408/FTSCY/WS95031<br>         960000.00<br>AYOTAMA NUSANTARA</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+960,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+8,456,348.47</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+25/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    3415900.00DDR:       5718.85</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,410,181.15</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,866,529.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+26/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2508/FTSCY/WS95031<br>         360000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+360,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,506,529.62</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+26/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2679100.00DDR:       4018.65</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,675,081.35</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,181,610.97</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+27/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2716100.00DDR:       5102.65</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,710,997.35</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+16,892,608.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+27/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2708/FTSCY/WS95031<br>        2400000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,400,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,492,608.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+27/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+FLAZZ BCA<br>TOPUP08567589738  0145200701628333  000000000 278433</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0998</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+100,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,392,608.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    2527300.00DDR:       3790.95</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,523,509.05</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+16,916,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>          36000.00<br>SULISTYA MARTUTI</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+36,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+16,880,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>         250000.00<br>NINNA WAHYUNI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+250,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+16,630,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>        2030000.00<br>IWAN</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,030,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+14,600,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>        3501000.00<br>AYOTAMA NUSANTARA</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,501,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,099,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>        1376000.00<br>ERLANGGA</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,376,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+9,723,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+28/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>        2000000.00<br>DIYAH PUJI ASTUTI</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+2,000,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+7,723,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+29/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2808/FTSCY/WS95031<br>         170000.00<br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+170,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+7,553,117.37</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+29/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    3821400.00DDR:       5732.10</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,815,667.90</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+11,368,785.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+29/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2908/FTSCY/WS95031<br>         570000.00<br>SRI WAHYUNINGSIH</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+570,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+10,798,785.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+29/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>2908/FTSCY/WS95031<br>        1870000.00<br>AGUS ILYAS</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,870,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+8,928,785.27</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+30/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1820500.00DDR:       2730.75</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,817,769.25</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+10,746,554.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+30/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>3008/FTSCY/WS95031<br>        3975000.00<br>RASA DAPUR NUSANTA<br></font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+3,975,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+6,771,554.52</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+KR OTOMATIS<br>MID : 885000927085BAKULAN SHARALEE-HTGH:    1991300.00DDR:       2986.95</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,988,313.05</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+8,759,867.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>3108/FTFVA/WS95031<br>80777/TOKOPEDIA   <br>087758651810</font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+144,400.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+8,615,467.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING CR<br>3108/FTSCY/WS95031<br>       10000000.00<br>YUDO TRAH UTOMO</font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0491</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+10,000,000.00</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+18,615,467.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+TRSF E-BANKING DB<br>3108/FTSCY/WS95031<br>        1580000.00<br>LILIS LESTARI TEJO<br></font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+6560</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+1,580,000.00</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,035,467.57</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#f0f0f0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+BUNGA<br></font></div></td>
+<td width="30" bgcolor="#f0f0f0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+97.75</font></div></td>
+<td width="10" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+CR</font></div></td>
+<td width="" bgcolor="#f0f0f0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,035,565.32</font></div></td>
+</tr>
+<tr>
+<td width="30" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+31/08</font></div></td>
+<td width="130" bgcolor="#e0e0e0"><div align="left">
+<font face="verdana" size="1" color="#0000bb">
+PAJAK BUNGA<br></font></div></td>
+<td width="30" bgcolor="#e0e0e0"><div align="center">
+<font face="verdana" size="1" color="#0000bb">
+0000</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+19.55</font></div></td>
+<td width="10" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+DB</font></div></td>
+<td width="" bgcolor="#e0e0e0"><div align="right">
+<font face="verdana" size="1" color="#0000bb">
+17,035,545.77</font></div></td>
+</tr>
+</tbody></table>  </td></tr><tr>  <td colspan="2">    <table border="0" width="70%" cellpadding="0" cellspacing="0" bordercolor="#ffffff"> 	 <tbody><tr><td colspan="3"><hr></td></tr>	 <tr bgcolor="#e0e0e0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Saldo Awal</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td align="right"><font face="Verdana" size="1" color="#0000bb">16,693,292.97</font></td></tr>	 <tr bgcolor="#f0f0f0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Mutasi Kredit</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td align="right"><font face="Verdana" size="1" color="#0000bb">88,433,172.35</font></td></tr>	 <tr bgcolor="#e0e0e0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Mutasi Debet</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td align="right"><font face="Verdana" size="1" color="#0000bb">88,090,919.55</font></td></tr>	 <tr bgcolor="#f0f0f0"><td width="35%"><font face="Verdana" size="1" color="#0000bb">Saldo Akhir</font></td><td width="10"><font face="Verdana" size="1" color="#0000bb"> : </font></td><td align="right"><font face="Verdana" size="1" color="#0000bb">17,035,545.77</font></td></tr>	 <tr><td colspan="3"><hr></td></tr>    </tbody></table>  </td></tr>
+ <form name="iBankForm" method="POST" action="https://ibank.klikbca.com/accountstmt.do"></form>
+
+
+    </tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="590" bordercolor="#ffffff">
+<tbody><tr height="25">
+  <td valign="top">
+    <span align="left">
+      <font size="1" face="Verdana" color="#f00000"><b> </b> </font>
+    </span>
+  </td>
+</tr>
+<tr><td colspan="3"><hr color="#8486ce"></td></tr>
+</tbody></table>
+<script language="javascript">
+function fncDoubleOut(){
+    alert('Transaksi Anda sedang di proses. Terima kasih');
+    return false;
+}
+</script>
+
+
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'MNOEDBEGOGBDLIJFBBNAAOJEFEIEBNAHMDPDCHHGJNAOCPNNEEALCGMMMAEJMDDNILCBBIGOCIGDPCIGEBCAPHMPAGCECLLHLAJGJLKJICPKBMJFKECCNJDJAGBMKFNN',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr1649462204aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script></body></html>
